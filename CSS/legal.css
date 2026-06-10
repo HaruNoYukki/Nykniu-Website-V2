@@ -1,0 +1,41 @@
+.legal-content {
+    padding: 8rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+.legal-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--blue-400);
+}
+.legal-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+.legal-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+.legal-content strong {
+    color: white;
+    font-weight: 500;
+}
+.legal-content b {
+    color: white;
+    font-weight: 600;
+}
+.legal-content hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+}

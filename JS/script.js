@@ -22,3 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/**
+ * Redirecciona al usuario a la plataforma de agendamiento de citas.
+ */
+function agendarCita() {
+    const URL_AGENDAMIENTO = "https://calendly.com/angelgarcia-nykniu/sesion-de-diagnostico-de-arquitectura-b2b"; // URL de ejemplo profesional
+    window.location.href = URL_AGENDAMIENTO;
+}
