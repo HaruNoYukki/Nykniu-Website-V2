@@ -273,13 +273,25 @@ nav {
 
 /* --- Solutions (Pillars) --- */
 .solutions { padding: 6rem 0; }
-.section-header { max-width: 48rem; margin-bottom: 4rem; }
+.section-header { 
+    max-width: 48rem; 
+    margin-bottom: 4rem; 
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media (min-width: 768px) {
+    .section-header {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 .section-header h2 { font-size: 2.25rem; margin-bottom: 1rem; }
 .section-header p { font-size: 1.125rem; color: var(--text-muted); font-weight: 300; }
 
 .cards-grid {
     display: grid;
     gap: 1.5rem;
+    width: 100%;
 }
 @media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
 
@@ -293,6 +305,18 @@ nav {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    width: auto;
+    min-width: 0;
+    overflow-wrap: break-word;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media (min-width: 768px) {
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 .card:hover { border-color: rgba(59, 130, 246, 0.5); }
 
@@ -329,18 +353,34 @@ nav {
     background-color: var(--bg-section);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
+@media (min-width: 1024px) { .architecture { padding: 6rem 0; } }
 
 .arch-grid {
     display: grid;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
+    width: 100%;
 }
-@media (min-width: 1024px) { .arch-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { 
+    .arch-grid { 
+        grid-template-columns: 1fr 1fr; 
+        gap: 4rem;
+    } 
+}
 
-.arch-text h2 { font-size: 2.25rem; margin-bottom: 1.5rem; line-height: 1.2; }
-.arch-text p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 300; }
+.arch-text {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+.arch-text h2 { font-size: 1.75rem; margin-bottom: 1.5rem; line-height: 1.2; }
+@media (min-width: 768px) { .arch-text h2 { font-size: 2.25rem; } }
+
+.arch-text p { font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 300; }
+@media (min-width: 768px) { .arch-text p { font-size: 1.125rem; } }
+
 .arch-text strong { color: white; font-weight: 500; }
 
 .arch-features {
@@ -365,7 +405,11 @@ nav {
 .arch-feature-text p { font-size: 0.875rem; margin-bottom: 0; }
 
 /* -- Code Editor UI -- */
-.code-wrapper { position: relative; }
+.code-wrapper { 
+    position: relative; 
+    width: 100%;
+    min-width: 0;
+}
 .code-glow {
     position: absolute;
     inset: -0.25rem;
@@ -373,7 +417,12 @@ nav {
     filter: blur(16px);
     opacity: 0.1;
     border-radius: 0.5rem;
+    pointer-events: none;
 }
+@media (max-width: 767px) {
+    .code-glow { filter: blur(8px); opacity: 0.05; }
+}
+
 .code-editor {
     position: relative;
     background-color: var(--bg-editor);
@@ -395,12 +444,19 @@ nav {
 .code-title { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; margin-left: 0.75rem; }
 
 .code-body {
-    padding: 1.5rem;
+    padding: 1rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     font-family: var(--font-mono);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     line-height: 1.6;
     color: #cbd5e1;
+}
+@media (min-width: 768px) {
+    .code-body {
+        padding: 1.5rem;
+        font-size: 0.8125rem;
+    }
 }
 .code-body pre { margin: 0; }
 
@@ -445,8 +501,21 @@ nav {
 @media (min-width: 768px) { .cta h2 { font-size: 3rem; } }
 .cta p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 300; }
 
-.cta-buttons { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
-@media (min-width: 640px) { .cta-buttons { flex-direction: row; } }
+.cta-buttons { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media (min-width: 640px) { 
+    .cta-buttons { 
+        flex-direction: row; 
+        margin-left: 0;
+        margin-right: 0;
+    } 
+}
 
 .btn-white {
     background-color: white;
